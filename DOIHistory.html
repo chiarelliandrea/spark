@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="/css/optionsStyle.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/icon/icon.png" />
+    <title>My history</title>
+</head>
+
+<body>
+
+    <div class="containercitation">
+        <image src="assets/icon/iconTitle.png" alt="Spark" class="topLogo"></image>
+    </div>
+
+    <div class="containercitation">
+
+        <div class="introText"></div>
+
+    </div>
+    <div class="containercitation">
+
+        <div class="container saveSettings">
+
+            <div>
+                <button id="reloadHistory" class="buttonAction learn-more-Spark SparkSearch">Reload history</button>
+            </div>
+            <div>
+                <button id="copyButton" class="buttonAction learn-more-Spark SparkSearch">Copy all references</button>
+            </div>
+            <div>
+                <input placeholder="Search your history..." id="SparkSearchBox" type="text"
+                    class="buttonAction learn-more-Spark SparkSearch" />
+            </div>
+
+        </div>
+
+        <div class="sparkLoader" id="sparkSpin"></div>
+
+        <div id="containerHistory" class="harvestedCitationContainer"></div>
+
+    </div>
+
+    <script src="assets/js/jquery-3.1.1.min.js"></script>
+    <script src="DOIHistory.js"></script>
+    
+</body>
+
+</html>

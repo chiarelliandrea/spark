@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="/css/optionsStyle.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/icon/icon.png" />
+  <title>Options</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="card2Logo">
+      <image src="assets/icon/sparkFullLogo.png" alt="Spark" class="topLogo"></image>
+    </div>
+
+    <div class="card2">
+      <h3>Data sources</h3>
+      <p class="small">Unpaywall and CORE.ac.uk can help you find open access versions of articles. If you enable
+        CORE.ac.uk, please remember to enter an API key in the appropriate box.</p>
+      <p>
+      <div class="inputBox">
+        <input type="checkbox" id="UnpaywallAPICheckbox" />
+        Unpaywall database
+      </div>
+      <div class="inputBox">
+        <input type="checkbox" id="COREAPICheckbox" />
+        CORE.ac.uk database
+      </div>
+      </p>
+
+    </div>
+
+    <div class="card2">
+      <h3>Citations</h3>
+      <p class="small">Please select a citation style - APA is selected by default. To change styles, delete the text in
+        the box below.</p>
+      <div>
+        <input list="cStyle" id="dataListSelection" />
+        <datalist id="cStyle">
+          <option value="apa">
+            American Psychological Association (APA)
+          </option>
+          <option value="modern-language-association">
+            Modern Language Association (MLA)
+          </option>
+          <option value="chicago-author-date">Chicago (Author-Date)</option>
+          <option value="bibtex">BibTeX</option>
+          <option value="harvard-cite-them-right">
+            Harvard (Cite Them Right)
+          </option>
+          <option value="modern-humanities-research-association">
+            Modern Humanities Research Association (MHRA)
+          </option>
+          <option value="vancouver-author-date">
+            Vancouver (Author-Date)
+          </option>
+          <option value="council-of-science-editors">
+            Council of Science Editors (CSE)
+          </option>
+        </datalist>
+      </div>
+
+    </div>
+
+    <div class="card2">
+      <h3>Unpaywall email</h3>
+      <p class="small">Please enter your email for Unpaywall API calls. This email address is just shared between you
+        and <a href="https://unpaywall.org/products/api" target="blank">Unpaywall</a> - nobody else will see it.</p>
+
+      <p class="small">
+        <label for="emailForUnpaywall"></label>
+        <input type="email" id="emailForUnpaywall" name="emailForUnpaywall" class="labelSize" />
+      </p>
+
+    </div>
+
+    <div class="card2">
+      <h3>CORE API key</h3>
+      <p class="small">Please enter your CORE.ac.uk API key. You can get one for free <a
+          href="https://core.ac.uk/searchAssets/api-keys/register/" target="blank">here</a>.</p>
+
+      <p class="small">
+        <label for="coreAPIkey"></label>
+        <input type="text" id="coreAPIkey" name="coreAPIkey" class="labelSize" />
+      </p>
+
+    </div>
+
+    <div class="card2">
+      <h3>Privacy</h3>
+      <p class="small">Any of the information gathered by this extension stays in your browser. The email address and
+        the API key are required to manage API requests and are only used for these purposes. No other information is
+        gathered nor sent to third parties. </p>
+
+    </div>
+
+    <div class="card2">
+      <h3>Any questions?</h3>
+      <p class="small">This extension has been developed as a personal project. For more information or feature
+        requests, please send me an email at <a
+          href="mailto:scholarlyspark@tuta.io?subject=Question on the Spark extension"> scholarlyspark@tuta.io</a>.</p>
+
+    </div>
+
+  </div>
+
+  <div class="container saveSettings">
+
+    <div>
+      <button id="save" class="buttonAction learn-more-Spark saveOptions">Save your settings</button>
+    </div>
+
+  </div>
+
+  <script src="options.js"></script>
+
+</body>
+
+</html>

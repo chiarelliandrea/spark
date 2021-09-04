@@ -1,0 +1,64 @@
+/* Styles for the popup menu that appears by clicking on the Spark logo.*/
+
+body {
+  background-color: #2c416c;
+  margin: auto;
+  width: 135px;
+  color: white;
+  padding-top: 7px;
+  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  font-size: 10px;
+  overflow: hidden;
+  border-radius: 15px 50px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 7px;
+}
+
+.buttonAction {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  text-decoration: none;
+  font-size: 11px;
+  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  line-height: 1;
+  margin: 0 auto;
+  display: block;
+  width: 110px;
+}
+
+.optionsRow {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.buttonAction.learn-more-Spark {
+  font-weight: 600;
+  color: #382b22;
+  text-transform: uppercase;
+  padding: 5px 7px;
+  background: #fff0f0;
+  border: 2px solid #b18597;
+  border-radius: 5px;
+}
+
+.buttonAction.learn-more-Spark:hover {
+  background-color: #b18597;
+  color: white;
+  transition: 0.5s;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
