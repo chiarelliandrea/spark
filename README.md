@@ -4,7 +4,7 @@
 
 [Spark](https://chiarelliandrea.com/portfolio/spark-extension-open-access/) aims to be a helping hand as you browse academic content such as articles, books and preprints. It helps you do three things: Cite, Read and Explore. You can download Spark [via the Chrome Web Store](https://chrome.google.com/webstore/detail/spark/dfcldhbleocbnmbmnbgnljaeficpbkck).
 
-Take a look at Spark's features on [YouTube](https://www.youtube.com/watch?v=gYBf8zm-hyQ)!
+Take a look at Spark's features on [YouTube](https://www.youtube.com/watch?v=gYBf8zm-hyQ)! Please keep in mind that I’m not a professional developer. If you have any suggestions to improve the code, please [get in touch](mailto: scholarlyspark@tuta.io)!
 
 ### CITE
 
