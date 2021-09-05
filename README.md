@@ -29,4 +29,4 @@ Because it’s free: Spark was built as a personal project. It is free, customis
 As you browse the internet, Spark looks for DOIs (or Digital Object Identifiers) either displayed on the page or in its HTML code. These are used to query four databases via their publicly accessible APIs, and you are simply presented with the results of this process. Spark works thanks to the fantastic data collection and curation efforts of various organisations: CORE, Crosscite, OpenCitations and Unpaywall. These guys are the real MVP.
 Just so you know, any of the information gathered by Spark stays in your browser. The email address and the API key in the Options menu are required to manage API requests and are only used for these purposes. No other information is gathered nor sent to third parties.
 
-Do you have any questions about Spark? Check out the [FAQ page](https://chiarelliandrea.com/2021/09/04/spark-frequently-asked-questions-faq/) or get in touch!
+Do you have any questions about Spark? Check out the [FAQ page](https://chiarelliandrea.com/2021/09/04/spark-frequently-asked-questions-faq/) or [get in touch](mailto:scholarlyspark@tuta.io)!
