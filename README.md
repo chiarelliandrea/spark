@@ -1,4 +1,4 @@
-# Spark - Academic APIs made easy
+# Spark - Cite, Read and Explore academic content
 
 *FIND OPEN VERSION OF ARTICLES AS YOU BROWSE, GET ACCESS TO FORMATTED CITATIONS, AND EXPLORE WORKS CITED BY YOUR FAVOURITE AUTHORS.*
 
