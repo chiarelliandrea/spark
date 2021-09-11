@@ -384,6 +384,8 @@ function pickaSearchPathway() {
     pageURL.indexOf("onlinelibrary.wiley.com") > -1 || 
     pageURL.indexOf("journals.aom.org") > -1 ||
     pageURL.indexOf("science.org") > -1 ||
+    pageURL.indexOf("mjlis.um.edu.my") > -1 ||
+    pageURL.indexOf("codata.org") > -1 ||
     pageURL.indexOf("royalsocietypublishing.org") > -1 
     ) {
     // This converts the really ugly HTML into text we can scrape using a regular expression for DOIs
@@ -392,7 +394,14 @@ function pickaSearchPathway() {
 
     // Check if the above matching has returned any DOI.
     if (found) {
+
+      if (found.length==1){
       theDOIweAreLookingFor = String(found);
+      }
+
+      if (found.length>1){
+        theDOIweAreLookingFor = String(found[0]);
+      }
 
       // If we have found a DOI, this might need some cleaning. The function below has been developed by trial and error by checking incorrect or poor DOI matches
       theDOIweAreLookingFor = cleanHorribleHTML(theDOIweAreLookingFor);
