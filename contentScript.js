@@ -22,7 +22,10 @@ function cleanHorribleHTML(doi) {
   doi = doi.split("Corpus")[0];
   doi = doi.split("About")[0];
   doi = doi.split("Section")[0];
-
+  doi = doi.replace("%C2", "");
+  doi = doi.replace("%A9", "");
+  doi = doi.replace("©", "");
+  
   // With some regular expressions, we end up with a full stop at the end of the DOI. This breaks the APIs so has to be removed
   if (doi.endsWith(".")) {
     doi = doi.slice(0, -1);
@@ -365,6 +368,20 @@ function checkMetaTags() {
 function pickaSearchPathway() {
   grabPageHTML = document.documentElement.innerHTML;
 
+  // Some pages won't be searched by default,because they are search engines. This list could be made infinitely longer...
+  if (
+    pageURL.indexOf("core.ac.uk/search") > -1 ||
+    pageURL.indexOf("scholar.google.com/scholar") > -1 ||
+    pageURL.indexOf("google.com/search") > -1 ||
+    pageURL.indexOf("bing.com/search") > -1 ||
+    pageURL.indexOf("duckduckgo.com/?q") > -1 ||
+    pageURL.indexOf("europepmc.org/search") > -1 ||
+    pageURL.indexOf("pubmed.ncbi.nlm.nih.gov/?term") > -1 ||
+    pageURL.indexOf("bmjopen.bmj.com/search") > -1 ||
+    pageURL.indexOf("semanticscholar.org/search") > -1 
+  ) {
+    // Do nothing
+  }else{
   // This is Option 1. List of websites noted below.
   if (
     pageURL.indexOf("oxford.universitypressscholarship") > -1 ||
@@ -386,6 +403,10 @@ function pickaSearchPathway() {
     pageURL.indexOf("science.org") > -1 ||
     pageURL.indexOf("mjlis.um.edu.my") > -1 ||
     pageURL.indexOf("codata.org") > -1 ||
+    pageURL.indexOf("bmjopen.bmj.com") > -1 ||
+    pageURL.indexOf("embopress.org") > -1 ||
+    pageURL.indexOf("spectroscopyeurope.com") > -1 ||    
+    pageURL.indexOf("journals.uchicago.edu") > -1 ||    
     pageURL.indexOf("royalsocietypublishing.org") > -1 
     ) {
     // This converts the really ugly HTML into text we can scrape using a regular expression for DOIs
@@ -413,22 +434,8 @@ function pickaSearchPathway() {
     }
   } else {
     // This means if we are NOT on one of the above websites that need a custom approach
-
-    // Some pages won't be searched by default,because they are search engines. This list could be made infinitely longer...
-    if (
-      pageURL.indexOf("core.ac.uk/search") > -1 ||
-      pageURL.indexOf("scholar.google.com/scholar") > -1 ||
-      pageURL.indexOf("google.com/search") > -1 ||
-      pageURL.indexOf("bing.com/search") > -1 ||
-      pageURL.indexOf("duckduckgo.com/?q") > -1 ||
-      pageURL.indexOf("europepmc.org/search") > -1 ||
-      pageURL.indexOf("pubmed.ncbi.nlm.nih.gov/?term") > -1 ||
-      pageURL.indexOf("semanticscholar.org/search") > -1 
-    ) {
-      // Do nothing
-    } else {
-      // This is Option 2, i.e. the preferred option - we start checking the HTML meta tags
-      theDOIweAreLookingFor = checkMetaTags();
+    // This is Option 2, i.e. the preferred option - we start checking the HTML meta tags
+    theDOIweAreLookingFor = checkMetaTags();
     }
   }
 

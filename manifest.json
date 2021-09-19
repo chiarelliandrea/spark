@@ -3,7 +3,7 @@
 
   "name": "Spark",
   "description": "Find open version of articles as you browse, get access to formatted citations, and explore works cited by your favourite authors.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "options_page": "options.html",
   "action": {
     "default_icon": "assets/icon/icon.png",
